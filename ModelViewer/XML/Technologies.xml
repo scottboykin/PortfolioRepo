@@ -1,0 +1,6 @@
+<Technologies>
+	<Technology name="GunPowder" >
+		<Cost gold="100" stone="75" time="60"/>
+		<Unlocks unlocks="riflemen,longRangeBarrel" />
+	</Technology>
+</Technologies>

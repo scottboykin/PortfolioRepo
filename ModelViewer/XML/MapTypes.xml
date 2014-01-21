@@ -1,0 +1,17 @@
+<MapTypes>
+	<MapType name="grassland" default="grass" size="50,50" numberOfPlayers="4">
+    <Blob type="trees" minSize="4" maxSize="5" amount="4"/>
+		<Line type="water" minLength="10" maxLength="25" amount="10"/>
+    <Resource type="gold" amount="4" scale="true" localize="true" />
+	</MapType>
+  <MapType name="archipelago" default="water" size="80,80" numberOfPlayers="4">
+    <Blob type="grass" minSize="2" maxSize="10" amount="6"/>
+    <Line type="grass" minLength="2" maxLength="25" amount="4"/>
+    <Resource type="gold" amount="4" scale="true" localize="true" />
+  </MapType>
+  <MapType name="mountains" default="rock" size="50,50" numberOfPlayers="4">
+    <Line type="water" minLength="10" maxLength="25" amount="4"/>
+    <Line type="grass" minLength="10" maxLength="25" amount="30"/>
+    <Resource type="gold" amount="4" scale="true" localize="true" />
+  </MapType>
+</MapTypes>
