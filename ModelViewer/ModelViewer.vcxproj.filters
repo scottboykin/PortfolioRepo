@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{5c898e16-86c5-4a03-8c24-119c846c4425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Utilities">
+      <UniqueIdentifier>{545495db-e9a3-4560-b550-2fbf559eac7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Debug">
+      <UniqueIdentifier>{bdf2c9a9-b3a0-4e14-b740-3bfefb8f9f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Graphics">
+      <UniqueIdentifier>{f0e4be8b-8b1a-4141-bb22-9f39affd2a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Math">
+      <UniqueIdentifier>{2f4f66fe-4c54-4ce2-9036-e3ab7710665f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{d053d8ea-a0d3-4953-bd7b-81a161f7ab7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Utilities">
+      <UniqueIdentifier>{9db1d586-1c35-47dd-91bf-8e99599a64e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Shaders">
+      <UniqueIdentifier>{52737a37-05fe-47b3-a318-909025663dd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Graphics">
+      <UniqueIdentifier>{e6f713a4-09c2-47e2-93fa-e8916e83c1d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Debug">
+      <UniqueIdentifier>{7a16dfeb-6818-4a90-af55-486d3ebd2a65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Models">
+      <UniqueIdentifier>{30a5c75f-7282-4e79-afc0-6555c8fd485d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Cobblestones">
+      <UniqueIdentifier>{4331b99a-17cd-4232-863f-b5ca1bdffded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\XML">
+      <UniqueIdentifier>{40c105ff-6a28-4b5f-92e0-9b8c8ab3a830}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixStack.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.c">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandPrompt.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandWindow.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="StringParser.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialManager.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertex.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugBox.cpp">
+      <Filter>Source Files\Engine\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugPoint.cpp">
+      <Filter>Source Files\Engine\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugEntity.cpp">
+      <Filter>Source Files\Engine\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugOutput.cpp">
+      <Filter>Source Files\Engine\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugOutputManager.cpp">
+      <Filter>Source Files\Engine\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugPath.cpp">
+      <Filter>Source Files\Engine\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLReader.cpp">
+      <Filter>Source Files\Engine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix3.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinnedVertex.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletalMesh.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Bone.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mat4x4.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHelper.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="vec2.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixStack.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandPrompt.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandWindow.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="StringParser.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialManager.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vec4.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="mat3x3.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugPoint.h">
+      <Filter>Header Files\Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugBox.h">
+      <Filter>Header Files\Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugEntity.h">
+      <Filter>Header Files\Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugOutput.h">
+      <Filter>Header Files\Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugOutputManager.h">
+      <Filter>Header Files\Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugPath.h">
+      <Filter>Header Files\Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLReader.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vec2i.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3i.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="vec4i.h">
+      <Filter>Header Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NamedProperty.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSubscriber.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSystem.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
+      <Filter>Header Files\Engine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix3.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedVertex.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletalMesh.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Bone.h">
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainFont_EN_00.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MainFont_EN.FontDef.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PixelShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="VertexShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="CASTELAR.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testFont.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="BasicVertexShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="BasicFragmentShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="Noise.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FontVertexShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="FontFragmentShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="FrameBufferVertexShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="FrameBufferFragShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="ModelVertexShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="ModelFragmentShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+    <None Include="01-singlepoly.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="10-capstone-char.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="02-boxes.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="03-obj.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="04-cube-6-materials.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="05-sibenik.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="06-looney-level.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="07-scaling-box.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="08-skinned-tube.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="09-zax_mesh.MY3D">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="cobblestonesDiffuse.png">
+      <Filter>Resource Files\Cobblestones</Filter>
+    </None>
+    <None Include="cobblestonesSpecular.png">
+      <Filter>Resource Files\Cobblestones</Filter>
+    </None>
+    <None Include="cobblestonesEmissive.png">
+      <Filter>Resource Files\Cobblestones</Filter>
+    </None>
+    <None Include="cobblestonesHeight.png">
+      <Filter>Resource Files\Cobblestones</Filter>
+    </None>
+    <None Include="cobblestonesNormal.png">
+      <Filter>Resource Files\Cobblestones</Filter>
+    </None>
+    <None Include="XML\Technologies.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="XML\Terrains.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="XML\Units.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="XML\MapTypes.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="SkinnedModelVertexShader.glsl">
+      <Filter>Source Files\Engine\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
