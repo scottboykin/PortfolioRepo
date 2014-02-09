@@ -1,9 +1,0 @@
-<Terrains>
-	<Terrain name="grass" blockBuilding="false" movementModifier="1.0" color="0,255,0,255"/>
-  <Terrain name="water" blockBuilding="true" movementModifier="0.25" color="0,0,255,255"/>
-  <Terrain name="trees" blockBuilding="true" movementModifier="1.0" color="0,51,0,255"/>
-  <Terrain name="rock" blockBuilding="true" movementModifier="0.50" color="128,128,128,255"/>
-  <Terrain name="sand" blockBuilding="true" movementModifier="0.75" color="255,255,51,255"/>
-  <Terrain name="gold" blockBuilding="true" movementModifier="0.0" color="255,255,0,255"/>
-  <Terrain name="playerStart" blockBuilding="false" movementModifier="1.0" color="255,0,0,255"/>
-</Terrains>
