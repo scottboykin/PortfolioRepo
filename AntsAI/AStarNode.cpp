@@ -160,7 +160,6 @@ namespace SBAI
         }
     }
 
-    //TODO
     bool AStarNode::hasStraightPathTo( AStarNode* destination, const SBMath::vec3& velocity, float collisionRadius ) const
     {
         if( velocity == vec3() )
@@ -201,7 +200,6 @@ namespace SBAI
                 currentPosition[axis] += velocity[axis] * timeToNextIntercept;
             }
 
-            //TODO This is hacked just for my particular game. Need to make more robust.
             vec3 checkPos = currentPosition;
 
             if( velocity.x > 0 )

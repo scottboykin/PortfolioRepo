@@ -44,17 +44,8 @@ OrderCode AntWorker::update( const AgentReport& report )
 
             if( path.size() > 0 )
             {
-                /*ArenaSquareType squareType = GameInfo::getMapTile( *this ).getType();
-                if( squareType == ARENA_SQUARE_TYPE_FOOD && specialStatus != ENTITY_SPECIAL_STATUS_CARRYING_FOOD )
-                {
-                    orderCode = ORDER_TAKE_FOOD;
-                }
-
-                else
-                {*/
-                    orderCode = GameInfo::getDirectionToMove( vec3( positionX, positionY, 0.0f ), path.back()->getPosition() );
-                    path.pop_back();
-                //}
+				orderCode = GameInfo::getDirectionToMove( vec3( positionX, positionY, 0.0f ), path.back()->getPosition() );
+				path.pop_back();
             }
             else
             {

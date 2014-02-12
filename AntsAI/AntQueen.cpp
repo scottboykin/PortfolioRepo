@@ -21,12 +21,18 @@ OrderCode AntQueen::update( const AgentReport& report )
         break;
     }
 
-    bool bAcceptableNutrients = GameInfo::numberOfNutrients > 2000;
-    bool bCreateSoldier = numberOfAntsLostInCombat > 0 && bAcceptableNutrients && GameInfo::numOfAntsPerType[ENTITY_TYPE_SOLDIER] < GameInfo::numOfAntsPerType[ENTITY_TYPE_WORKER] / 2;
-    bool bEndGameSoliderCapacity = GameInfo::turnNumber >= 1000 && GameInfo::numOfAntsPerType[ENTITY_TYPE_SOLDIER] < 5;
+	int currentNumOfSoliders = GameInfo::numOfAntsPerType[ENTITY_TYPE_SOLDIER];
+	int currentNumOfWorkers = GameInfo::numOfAntsPerType[ENTITY_TYPE_WORKER];
+	
+    bool endGame =  GameInfo::turnNumber >= 1000;
+    bool acceptableNutrients = GameInfo::numberOfNutrients > 2000;
+
+    bool createSoldier = numberOfAntsLostInCombat > 0 && acceptableNutrients && currentNumOfSoliders < currentNumOfWorkers / 2;
+    bool endGameSoliderCapacity = endGame && currentNumOfSoliders < 5;
+    bool noMoreResourcesFound = GameInfo::turnNumber - GameInfo::turnSinceLastSeenResource <= 30;
 
     
-    if( GameInfo::currentStrategy != GameInfo::STRATEGY_SOLO && ( bCreateSoldier || bEndGameSoliderCapacity ) )
+    if( GameInfo::currentStrategy != GameInfo::STRATEGY_SOLO && ( createSoldier || endGameSoliderCapacity ) )
     {
         orderCode = ORDER_CREATE_SOLDIER;
         if( numberOfAntsLostInCombat > 0 )
@@ -34,7 +40,7 @@ OrderCode AntQueen::update( const AgentReport& report )
     }
     else
     {
-        if( GameInfo::numberOfNutrients > 1500 && GameInfo::collectionRate > 2 * GameInfo::myAnts.size() && GameInfo::turnNumber < 1000 && GameInfo::turnNumber - GameInfo::turnSinceLastSeenResource <= 30 )
+        if( GameInfo::numberOfNutrients > 1500 && GameInfo::collectionRate > 2 * GameInfo::myAnts.size() && !endGame && noMoreResourcesFound )
         {
             orderCode = ORDER_CREATE_WORKER;
         }
@@ -94,11 +100,6 @@ OrderCode AntQueen::update( const AgentReport& report )
             }
         }
     }
-
-    /*if( GameInfo::numOfAntsPerType[ENTITY_TYPE_WORKER] == 0 && GameInfo::turnNumber < 1000 )
-    {
-        orderCode = ORDER_CREATE_WORKER;
-    }*/
 
     return orderCode;
 }
