@@ -1,17 +1,12 @@
 class TTWeap_EMPPistol extends TTWeapon;
 
 var(EMPPistol) float empRechargeDelay;
-//var(EMPPistol) float empMineLimit;
 
 var bool bEMPReady;
 var bool bEMPDetonated;
 var bool bReadyToFire;
 var SoundCue empRecharged;
 var TTProj_EMPBall empBall;
-
-//var array<Projectile> placedMines;
-
-//var const TTProj_EMPMine mineArchetype;
 
 var const TTProj_EMPRound roundArchetype;
 var const TTProj_EMPBall ballArchetype;
@@ -118,11 +113,6 @@ simulated function Tick( float DeltaTime )
 	Super.Tick(deltaTime);
 }
 
-function RemoveMine( TTProj_EMPMine mine )
-{
-	//placedMines.RemoveItem( mine );
-}
-
 simulated function PostBeginPlay()
 {
 	// Ammo Display Stuff (Chris Burris)
@@ -132,8 +122,6 @@ simulated function PostBeginPlay()
 	AmmoDisplay.GetPC();
 	AmmoDisplay.RenderTexture = RenderTexture;
 	AmmoDisplay.Init();
-
-	//FireInterval[0] = 0.1;
 }
 
 replication
@@ -189,8 +177,6 @@ DefaultProperties
 	MuzzleFlashLightClass=class'UTGame.UTLinkGunMuzzleFlashLight'
 
 	MuzzleFlashDuration = 0.33
-
-	//EffectSockets(0)=mflash
 
 	bEMPDetonated = true
 	bReadyToFire = true

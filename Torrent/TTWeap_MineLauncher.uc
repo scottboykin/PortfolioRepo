@@ -1,7 +1,6 @@
 class TTWeap_MineLauncher extends TTWeapon;
 
 var( MineLauncher ) int numOfPellets;
-//var( MineLauncher ) int mineLimit;
 var( MineLauncher ) float shieldDrainRate;
 var( MineLauncher ) float shieldPercentDmgReduction;
 var( MineLauncher ) int shieldDrainAmount;
@@ -21,7 +20,6 @@ var StaticMeshComponent shield;
 
 simulated function FireAmmunition()
 {
-	//if( CurrentFireMode == 0 || ( CurrentFireMode == 1 && placedMines.Length < mineLimit ) )
 	if( ( CurrentFireMode == 0 && !TTPawn( Owner ).bShieldDeployed && bReadyToFire ) || CurrentFireMode == 1 )
 	{
 		// if this is the local player, play the firing effects
@@ -77,12 +75,6 @@ simulated function Projectile ProjectileFire()
 
 	ServerWeaponReadyToFire( false );
 	WeaponReadyToFire( false );
-	//else
-	//{	
-	//	p = SpawnArchetypeProjectile( mineArchetype );
-	//	TTProj_ProxiMine( p ).SetWeaponOwner( self );
-	//	placedMines.AddItem( p );
-	//}
 
 	return p;
 }
@@ -238,12 +230,6 @@ simulated function PostBeginPlay()
 
 }
 
-function RemoveMine( TTProj_ProxiMine mine )
-{
-	placedMines.RemoveItem( mine );
-}
-
-
 replication
 {
 	if (bNetDirty && bNetOwner && Role == ROLE_Authority)
@@ -254,14 +240,12 @@ DefaultProperties
 {
 	WeaponColor=(R=255,G=0,B=0,A=255)
 	FireInterval(0)=+0.75                        
-    //FireInterval(1)=+0.75
 	PlayerViewOffset=(X=10,Y=2.5,Z=-8.0)
 
 	numOfPellets = 5
 	shieldDrainRate = 1.0
 	shieldDrainAmount = 1
 	shieldPercentDmgReduction = 0.5f
-	//mineLimit = 3
 	bReadyToFire = true
 
 	Begin Object Name=FirstPersonMesh
@@ -299,8 +283,6 @@ DefaultProperties
 	WeaponProjectiles(0)=class'TTProj_MicroRockets'
 	WeaponFireTypes(1)=EWFT_Custom
 	ShotCost(1) = 0;
-    //WeaponFireTypes(1)=EWFT_Projectile
-    //WeaponProjectiles(1)=class'TTProj_ProxiMine'
     
 	MuzzleFlashSocket=MuzzleFlashSocket
 	MuzzleFlashPSCTemplate=ParticleSystem'TT_Particles.Particles.muzzle_flash_03'

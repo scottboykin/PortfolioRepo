@@ -27,18 +27,8 @@ simulated function PostBeginPlay()
 	AmmoDisplay.RenderTexture = RenderTexture;
 	AmmoDisplay.Init();
 
-	//if( !bBurstMode )
-	//{
-	//	FireInterval[0] = autoFireRate;
-	//}
-	//else
-	//{
-	//	FireInterval[0] = burstFireRate;
-	//}
-
 	FireInterval[0] = autoFireRate;
 	FireInterval[1] = burstFireRate;
-	//FireInterval[1] = modeSwitchDelay;
 }
 
 // Ammo Display Stuff (Chris Burris)
@@ -116,11 +106,6 @@ simulated function FireAmmunition()
 	{
 		bBurstMode = true;
 	}
-
-	//if( CurrentFireMode == 0 || CurrentFireMode == 1 && bReadyToFire )
-	//{
-		super.FireAmmunition();
-	//}
 }
 
 simulated function StopFire( byte FireModeNum )
@@ -151,7 +136,6 @@ simulated function CustomFire()
 	{
 		FireInterval[0] = autoFireRate;
 	}
-//	`log( bBurstMode );
 }
 
 simulated function Timer()
@@ -180,8 +164,6 @@ defaultproperties
 		AnimSets(0)=AnimSet'TT_Weapons.Animations.pistol_anim_01'
 		AnimSets(1)=AnimSet'TT_Weapons.Animations.pistol_anim_01'
 		Animations=MeshSequenceA
-		//Rotation=(Yaw=-16384)
-		//Translation=(X=-1,Y=2,Z=0)
 		Translation=(X=0,Y=1,Z=-1)
 		FOV=60.0
 	End Object
@@ -191,12 +173,6 @@ defaultproperties
 	End Object
 
 	InstantHitMomentum(1)=+10000.0
-
-	//Defaults for right click toggle
-	//WeaponFireTypes(0)=EWFT_Projectile
-	//WeaponProjectiles(0)=class'TTProj_PlasmaRound'
-	//WeaponFireTypes(1)=EWFT_Custom
-	//ShotCost(1) = 0
 
 	WeaponFireTypes(0)=EWFT_Projectile
 	WeaponProjectiles(0)=class'TTProj_PlasmaRound'
@@ -212,8 +188,6 @@ defaultproperties
 	//InstantHitDamage(0)=15
 
 	AttachmentClass=class'Torrent.TTAttachment_PlasmaRifle'
-	
-	//InstantHitDamageTypes(0)=class'UTDmgType_ShockPrimary'
 
 	WeaponFireSnd[0]=SoundCue'TT_Sounds.TT_Sounds.TT_sfx_cue_riflefire'
 	WeaponFireSnd[1]=SoundCue'TT_Sounds.TT_Sounds.TT_sfx_cue_riflefire'
@@ -226,7 +200,6 @@ defaultproperties
 	MaxDesireability=0.65
 	AIRating=0.65
 	CurrentRating=0.65
-	//bInstantHit=true
 	bInstantHit=false
 	bSplashJump=false
 	bRecommendSplashDamage=false
